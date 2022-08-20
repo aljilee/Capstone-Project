@@ -59,7 +59,8 @@ The folders data-raw and notebooks-cleaning contain all of the files that we use
   
   5. Price data
   
-    TBD
+    To pull our data for social services, we scraped data from ```[https://www.cqc.org.uk/search/all](https://www.gov.uk/government/statistical-data-sets/price-paid-data-downloads)```, this is considered our main dataset, which included all the property price data in UK. We have filtered the data and kept the ones related to Elmbridge (although we started with Surrey first, but after several trials we decided to cut it down to Elmbridge). We have also remode the properties with Type "other", as these properties are considered outliers, they can include a plot of land with a valie of tens if not hundreds of millions.
+    
     
 ## 4. Feature Engineering
   
@@ -80,12 +81,30 @@ accepts two pairs of coorindates, and returns the distance as KM. We calculated 
    
 ## Modeling
 
-TBD
+Linear Regression
+
+Our attempt was to predict the YoY return, and one of the several models used was Linear Regression.
+We started with 1 year on year return prediction, and we split the data between train and test, this enabled us to separately measure the performance of the models on new data and compare this to their performance on the training data.
+
+In order to test all possible models under Linear Regression, we used the p-value of each variable and the adjusted R-squared values, to predict YoY using a combination of the available independent variables we have.
+
+Using an OLS table, one of the variables of the linear regression models was considered as a highly significant predictor (p < 0.01 or even 0.05). We have tried to exclude some, and include others, to have multiple comparisons, but same results every time.
+
+Another way to test our results was when fitting our model and then try it on the test daya; the outcome was not fit enough, the predicted outcome versus the actual ones had a Mean Squared Error value of: 0.02
+
+More Models
+
+Additional regression models including Decision Trees, Random Forest, XGBoost, and MLPRegressor (neural network) were explored with little to no improvement in predictive performance. For further validation, PyCaret libraries were used to automate results for 19 different regression models.  None of the models showed any negligible improvement in MAE, MSE, RMSE, and R2 scores over results from a dummy regressor using mean values.
+
 
 # Findings 
 
-TBD
+The models tested showed a MSE which was very similar to a Dummy Regressor, which tells that there is no specific patterns or correlations between the features used and the targeted YoY return
+
 
 # Conclusion
 
+The features we have collected were not enough to build a predictive model to calculate the YoY returns. Missing features that will help have more accurate results were the property characteristics and size, however our hypothesis was mainly to test whether if this data was not part of the features, will other attributes be enough to build a predictive model.
+
+Copyright: Contains HM Land Registry data © Crown copyright and database right 2021. This data is licensed under the Open Government License v3.0.
 
