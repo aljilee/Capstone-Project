@@ -24,7 +24,9 @@ The repository contains 6 folders, separating the files that are in the reposito
 
   5. notebooks-cleaning: Contains the notebooks that we used for cleaning. Each notebook contains the location/technique that we pulled the data from, as well as the      steps that we did to clean each dataset.
 
-  6. notebooks-models: Contains the notebooks that we used to create our predictve models.
+  6. notebooks-models: Contains the notebooks that we used to create our predictve models. 
+One of the notebook "Final Prject - Data Exploration" contains some data explorations and some data visualisation which helped us decide the next steps.
+It also includes 2 seperate notebooks for Linear Regression Models; one applied on first data features, and the second was applied on adjusted features which was better than the first attempt.
 
 ## 2. Installing required packages
 
