@@ -1,0 +1,61 @@
+﻿Required data files:
+ 
+Price Data:
+https://www.gov.uk/government/statistical-data-sets/price-paid-data-downloads
+
+
+Schools data:
+https://www.compare-school-performance.service.gov.uk/schools-by-type?step=default&table=schools&region=936&geographic=la&for=primary
+
+
+Crime Data:
+http://data.police.uk/docs/
+
+
+Social Services data:
+https://www.cqc.org.uk/search/all
+
+
+Parks Data:
+https://www.geoapify.com/geocoding-api
+
+
+pp-complete.csv
+http://prod.publicdata.landregistry.gov.uk.s3-website-eu-west-1.amazonaws.com/pp-complete.csv
+ 
+Elmbridge postcodes.csv
+https://www.doogal.co.uk/AdministrativeAreas.php?district=E07000207
+ 
+Elm_wards.json
+https://martinjc.github.io/UK-GeoJSON/
+ 
+ 
+Required installations (pip install)
+ 
+folium
+xgboost
+Pycaret
+geopy
+ 
+ 
+Required imports
+ 
+import pandas as pd
+import numpy as np
+from sklearn.cluster import KMeans
+import seaborn as sns
+import plotly.express as px
+import matplotlib.pyplot as plt
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import mean_squared_error
+from sklearn.metrics import mean_absolute_error
+from sklearn.dummy import DummyRegressor
+from sklearn.neural_network import MLPRegressor
+from sklearn.linear_model import LinearRegression
+from sklearn.preprocessing import PolynomialFeatures
+from math import radians, cos, sin, asin, sqrt
+from collections import Counter
+import statsmodels.formula.api as smf
+from xgboost import XGBRegressor
+from pycaret.regression import *
+import geopy.distance
