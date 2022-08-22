@@ -59,7 +59,7 @@ The folders data-raw and notebooks-cleaning contain all of the files that we use
   
   5. Price data
   
-    To pull our data for social services, we scraped data from ```[https://www.cqc.org.uk/search/all](https://www.gov.uk/government/statistical-data-sets/price-paid-data-downloads)```, this is considered our main dataset, which included all the property price data in UK. We have filtered the data and kept the ones related to Elmbridge (although we started with Surrey first, but after several trials we decided to cut it down to Elmbridge). We have also remode the properties with Type "other", as these properties are considered outliers, they can include a plot of land with a valie of tens if not hundreds of millions.
+      To pull our data for social services, we scraped data from ```[https://www.cqc.org.uk/search/all](https://www.gov.uk/government/statistical-data-sets/price-paid-data-downloads)```, this is considered our main dataset, which included all the property price data in UK. We have filtered the data and kept the ones related to Elmbridge (although we started with Surrey first, but after several trials we decided to cut it down to Elmbridge). We have also remode the properties with Type "other", as these properties are considered outliers, they can include a plot of land with a valie of tens if not hundreds of millions.
     
     
 ## 4. Feature Engineering
