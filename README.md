@@ -1,4 +1,4 @@
-# Team GoBlue: Property Return Prediction
+# Team Go Blue: Property Return Prediction
 
 The following shows you how to replicate our work of predicting the one year return, three year return, and five year return for properties in the borough of Elmbridge, in the United Kingdom using 4 features: parks, social services, schools, and crimes. Our goal for the project is to predict the return rate of houses in the borough of Elmridge, only considering external factors.
 
